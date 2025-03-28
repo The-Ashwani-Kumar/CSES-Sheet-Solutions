@@ -11,19 +11,16 @@
 using namespace std;
 
 int main(){
-    // // Redirect input and output to files
+    // Redirect input and output to files
     // freopen("inputf.in", "r", stdin);  // Read input from inputf.in
     // freopen("outputf.out", "w", stdout);  // Write output to outputf.out
 
-    ll n;
+    ll n, sum = 0, num;
     cin>>n;
-    while(n != 1){
-        cout<<n<<" ";
-        if(n % 2 == 0){
-            n /= 2;
-        } else {
-            n = 3 * n + 1;
-        }
+    ll total = (n * (n + 1)) / 2;
+    while(--n){
+        cin>>num;
+        sum += num;
     }
-    cout<<1;
+    cout << total - sum << endl;
 }
